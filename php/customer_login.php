@@ -9,6 +9,8 @@
             $res=mysqli_query($connect,$sql);
             if(mysqli_num_rows($res)>0){
                 $_SESSION['Email']=$Email;
+                
+
                 header('location:customer_query.php');
             }else{
               echo '<script>alert("Wrong Email or Password.Try again with correct one.")</script>';
@@ -59,7 +61,7 @@
             </div>
         </div>
     </nav>
-    <div class="container login">
+      <div class="container login">
     <form method="post" action="" enctype="multipart/form-data">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
