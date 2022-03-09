@@ -1,0 +1,34 @@
+#about{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+#about h1{
+    
+    color: white;
+    margin: 55px;
+    align-self: center;
+    
+}
+.about{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.about img{
+    width: 400px;
+    height: 400px;
+    padding: 0px 30px;
+}
+.name{
+    padding: 10px;
+}
+.name h2{
+    font-size: 2rem;
+}
+.name p{
+    font-size: 1.2rem;
+}
