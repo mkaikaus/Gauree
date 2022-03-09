@@ -5,16 +5,52 @@
     font-variant: small-caps;
 }
 
-.nav_item a{
-    background-color: #8946A6;
-    color: white;
-}
+
+
+
+
 
 .logo{
     font-family: cursive;
     font-size: 25px;
     color: #8946A6!important;
 }
+.logo-image{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.bg-color{
+    background-color:white;
+    
+}
+.logo-image{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    margin-left: 170px;
+}
+.nav-text{
+    font-weight:bolder ;
+}
+.nav-margin{
+    margin-left:100px;
+}
+.nav-color{
+    font-size:20px;
+    color:#8946A6!important;
+    font-weight: bolder;
+}
+.nav-color:hover{
+    color:#FF87CA!important;
+    text-underline-position: under;
+    transition:0.6s;
+}
+
+
+
 
 .hero{
     width: 100vw;
@@ -34,14 +70,124 @@
     font-style: bold;
     position: relative;
     margin: 0 auto;
-    top: 13vw;
+    top: 23vw;
     bottom: 13vw;
     font-size: 3.5vw;
-    color: white;
+    color: #8946A6;
+    font-weight:bold;
 }
 
 .product h1{
     text-align: center;
-    margin: 10px auto;
-    color: rgb(3, 115, 135)!important;
+    margin: 30px auto;
+    color: #8946A6 !important;
+    font-weight: bolder;
+}
+
+.card_image{
+  height: 200px!important;
+  transition: all 1.5s ease;
+}
+.inner{
+    overflow: hidden;
+}
+.inner:hover .card_image{
+    transform: scale(1.5);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+.card_text{
+    font-size:25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.card_text1{
+    font-size:12px;
+}
+.card_text2{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.read{
+    color:#8946A6!important;
+    font-weight:bolder;
+    font-size:25px;
+}
+.read:hover{
+    color:#FF87CA!important;
+    transform:scale(1.1);
+    transition:0.6s;
+}
+
+
+
+
+
+
+
+
+.c_link{
+    color: blue;
+    padding: 35px;
+    text-decoration: none;
+    font-size: 40px
+}
+
+.c_link:hover{
+    color: blue;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.l_icon{
+    font-size: 48px;
+    color: white;
+}
+
+.l_icon2{
+    color: black;
+    font-size: 48px;
+}
+.l_icon4{
+    color:#D10000;
+    
+    font-size: 48px;
+}
+.l_icon1{
+    color: #000080;
+    margin-right: 40px;
+    font-size: 48px;
+}
+.l_icon3{
+    color: #0000FF;
+    
+    font-size: 48px;
+}
+.links{
+    margin-left: 420px;;
+}
+.connect{
+    text-align: center;
+    color:#8946A6;
+    margin-top:50px;
+}
+.new{
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 118, 117);
+    font-size: 20px;
+}
+
+footer{
+    background-color:#FFBDE6;
+    width: 100%;
+    height:150px;
+    margin-top:50px;
+    
+   }
+.logo-text{
+    color:#8946A6;
+    font-weight:bold;
+   }
+
+.f-text{
+    font-size:22px;
+
 }
