@@ -1,3 +1,21 @@
+<?php
+  session_start();
+    include_once('database.php');
+    if($connect){
+        if(isset($_POST['login'])){
+            $Email=$_POST['Email'];
+            $Password=$_POST['Password'];
+            $sql= "Select * from customer_info where Email='$Email' and Password='$Password'";
+            $res=mysqli_query($connect,$sql);
+            if(mysqli_num_rows($res)>0){
+                $_SESSION['Email']=$Email;
+                header('location:customer_query.php');
+            }else{
+              echo '<script>alert("Wrong Email or Password.Try again with correct one.")</script>';
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,20 +60,19 @@
         </div>
     </nav>
     <div class="container login">
-        <form>
+    <form method="post" action="" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="Password">
             </div>
-            <a class="btn btn-info" href="customer_query.html" role="button">Log in</a>
-            <!-- <button type="submit" class="btn btn-primary">Log in</button> -->
-        </form>
-        <br>
-        <h3 class="text-danger">Don't have an account?<a class="btn btn-danger" href="customer_signup.html" role="button" style="margin-left:20px">Sign up now</a></h3>
+            <button type="submit" class="btn btn-primary" name="login">Log in</button> 
+          </form>
+          <br>
+          <h3 class="text-danger">Don't have an account?<a class="btn btn-danger" href="customer_signup.php" role="button" style="margin-left:20px">Sign up now</a></h3>
     </div>
 
     <script src="../js/jquery-3.5.1.js"></script>
