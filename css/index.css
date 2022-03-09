@@ -79,6 +79,7 @@
 
 .product h1{
     text-align: center;
+<<<<<<< HEAD
     margin: 30px auto;
     color: #8946A6 !important;
     font-weight: bolder;
@@ -191,3 +192,8 @@ footer{
     font-size:22px;
 
 }
+=======
+    margin: 10px auto;
+    /* color: rgb(3, 115, 135)!important; */
+}
+>>>>>>> 6dd8714e25c1ba4bd6432cc00a9bed7cfff1edf6
