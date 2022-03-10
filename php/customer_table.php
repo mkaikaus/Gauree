@@ -9,6 +9,31 @@ if ($connect) {
     }
 }
 ?>
+<?php
+include_once('database.php');
+if (isset($_GET['delete'])) {
+    $CustomerID = $_GET['delete'];
+    $del = "DELETE FROM customer_info where CustomerID='$CustomerID'";
+    $res3 = mysqli_query($connect, $del);
+    if ($res3) {
+        $sqlcus = "SELECT * from customer_info";
+    }
+}
+
+?>
+<?php
+include_once('database.php');
+if (isset($_POST['search'])) {
+    $valuetosearch = $_POST['valueTosearch'];
+    $query = "SELECT * FROM customer_info where concat(`CustomerName`,`Email`,`Address`) LIKE '%$valuetosearch%'";
+    $result = mysqli_query($connect, $query);
+} else {
+    $query = "SELECT * FROM customer_info";
+    $result = mysqli_query($connect, $query);
+    $valuetosearch = "";
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +45,8 @@ if ($connect) {
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet" href="../css/admin_query.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/admin_query.css">
 </head>
 
 <body>
@@ -69,37 +94,42 @@ if ($connect) {
             </div>
         </div>
     </div>
-    <section class="yellow">
-        <div class="container">
-            <div class="row justify-content-between align-items-center row1">
-                <div class="col-sm-4">
-                    <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <h2>Total Clients</h2>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <h2>Available Product</h2>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <h2>Pending Order</h2>
-                    </div>
-                </div>
+    <br>
+    <form action="customer_table.php" method="POST">
+        <div class="input-group align-self-center">
+            <div class="form-outline" style="margin-left: 37.5vw; width: 20vw;">
+                <input type="search" id="form1" class="form-control" name="valueTosearch" placeholder="Value to search" value="<?php echo $valuetosearch; ?>" />
             </div>
+            <button type="submit" class="btn btn-info" name="search" style="width: 5vw">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
-    </section>
-
+        <br>
+        <h3 CLASS="text-info font-weight-bolder text-center"> Customer's information</h3>
+        <table class="table table-striped table-hover table-bordered ">
+            <thead class="bg-dark text-light text-center">
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>PhoneNumber</th>
+                <th>Delete Account</th>
+            </thead>
+            <?php
+            while ($row = mysqli_fetch_array($result)) :
+            ?>
+                <!-- <table class="table table-striped table-hover table-bordered "> -->
+                <tr class="text-center">
+                    <td><?php echo $row['CustomerID']; ?></td>
+                    <td><?php echo $row['CustomerName']; ?></td>
+                    <td><?php echo $row['Email']; ?></td>
+                    <td><?php echo $row['Address']; ?></td>
+                    <td><?php echo $row['PhoneNumber']; ?></td>
+                    <td><a href="customer_table.php?delete=<?php echo $row['CustomerID']; ?>" class="btn  btn-danger">Delete Account</a></button></td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </form>
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
