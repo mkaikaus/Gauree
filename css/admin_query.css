@@ -24,3 +24,40 @@
     color: #8946A6;
     font-weight: bolder;
 }
+
+.btn-dark{
+    background-color: #B762C1!important;
+    color: white;
+    font-size: large;
+}
+
+.yellow{
+    width: 100%;
+    background: linear-gradient(to right,rgba(234, 153, 213, 0.5),rgb(234, 153, 213, 0.7)), 
+    url(../media/neckpiece2.jpg);
+    color: white;
+    font-weight: bolder;
+    z-index: 2; 
+    background-size: cover;
+}  
+  
+.yellow .row1{
+    padding: 50px 0;
+}
+
+.yellow .row1 span{
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.yellow .col-sm-3{
+    padding: 10px;
+}
+
+.yellow h1{
+    color: #8946A6;
+}
+
+

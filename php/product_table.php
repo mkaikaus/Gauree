@@ -10,6 +10,31 @@ if ($connect) {
 }
 ?>
 
+<?php
+include_once('database.php');
+if (isset($_GET['delete'])) {
+    $proID = $_GET['delete'];
+    $del = "DELETE FROM product_info where proID='$proID'";
+    $res3 = mysqli_query($connect, $del);
+    if ($res3) {
+        $sqlcus = "SELECT * from product_info";
+    }
+}
+?>
+
+<?php
+include_once('database.php');
+if (isset($_POST['search'])) {
+    $valuetosearch = $_POST['valueTosearch'];
+    $query = "SELECT * FROM product_info where concat(`proName`,`proType`) LIKE '%$valuetosearch%'";
+    $result = mysqli_query($connect, $query);
+} else {
+    $query = "SELECT * FROM product_info";
+    $result = mysqli_query($connect, $query);
+    $valuetosearch = "";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +45,8 @@ if ($connect) {
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet" href="../css/admin_query.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/admin_query.css">
 </head>
 
 <body>
@@ -69,37 +94,40 @@ if ($connect) {
             </div>
         </div>
     </div>
-    <section class="yellow">
-        <div class="container">
-            <div class="row justify-content-between align-items-center row1">
-                <div class="col-sm-4">
-                    <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <h2>Total Clients</h2>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <h2>Available Product</h2>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <h2>Pending Order</h2>
-                    </div>
-                </div>
+    <br>
+    <form action="product_table.php" method="POST">
+        <div class="input-group align-self-center">
+            <div class="form-outline" style="margin-left: 37.5vw; width: 20vw;">
+                <input type="search" id="form1" class="form-control" name="valueTosearch" placeholder="Value to search" value="<?php echo $valuetosearch; ?>" />
             </div>
+            <button type="submit" class="btn btn-dark login_btn" name="search" style="width: 5vw">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
-    </section>
-
+        <h3 CLASS="font-weight-bolder text-center" style="color: #8946A6;"> Product's information</h3>
+        <a href="#" class="btn btn-dark login_btn mt-2" style="margin-left: 43vw; width: 14vw;">Upload new product <i class='fas fa-plus-square'></i></a>
+        <table class="table table-striped table-hover table-bordered mt-2">
+            <thead class="bg-dark text-light text-center">
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Type</th>
+                <th>Price</th>
+                <th>Avaiable Piece</th>
+                <th>Delete Product</th>
+            </thead>
+            <?php while ($row = mysqli_fetch_array($result)) : ?>
+                <tr class="text-center">
+                    <td><?php echo $row['proID']; ?></td>
+                    <td><?php echo $row['proName']; ?></td>
+                    <td><?php echo $row['proType']; ?></td>
+                    <td><?php echo $row['price']; ?></td>
+                    <td><?php echo $row['piece']; ?></td>
+                    <td><a href="product_table.php?delete=<?php echo $row['proID']; ?>" class="btn btn-danger">Delete
+                            Product</a></button></td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </form>
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
