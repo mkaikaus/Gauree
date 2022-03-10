@@ -12,6 +12,16 @@ else{
 }
 ?>
 
+<?php
+    if(isset($_GET['delete'])){
+        $CustomerID=$_GET['delete'];
+        $del="DELETE FROM customer_info where CustomerID='$CustomerID'";
+        $res3=mysqli_query($connect,$del);
+        if($res3){
+            header('location:index.php');
+        }
+    }
+?>
 
 
 
@@ -105,7 +115,7 @@ else{
                    
                 </div>
                 <div class="col-sm">
-                    <a href="customer_query.php?delete=<?php echo $row['CustomerID'];?>" class="btn  btn-light">Delete Your Account</a></button>
+                    <a href="customer_profile.php?delete=<?php echo $row['CustomerID'];?>" class="btn  btn-light">Delete Your Account</a></button>
                 </div>
                 <div class="col-sm">
                 <a href="order_overview.php" class="btn  btn-light">Order Overview</a>

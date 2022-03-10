@@ -71,12 +71,6 @@
   </nav>
   <!--end of a navbar-->
 
-
-
-
-
-
-
  <!--start of a  section of banner-->
 
     <section>
@@ -190,13 +184,10 @@
         
        <!--end of a  grid of offers-->
       </div>
+    
 
 
-
-
-
-
-      <!--start of a grid section-->
+     <!--start of a grid section-->
 <div class="container">
     <div class="row mt-5">
       <div class=" col-sm-2 col-md-6 col-lg-2 ">
@@ -248,17 +239,8 @@
     </div>
   </div>
 
-
-
-
-
-
 <!--end of a grid section-->
 
-
-
-
-    
 
 
 

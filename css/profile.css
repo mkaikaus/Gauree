@@ -40,7 +40,7 @@
 }
 .nav-color:hover{
     color:#FF87CA!important;
-    text-underline-position: under;
+     text-decoration: underline;
     transition:0.6s;
 }
 
