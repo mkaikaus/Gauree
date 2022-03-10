@@ -19,8 +19,8 @@
                 $result= mysqli_query($connect, $input);
                 if($result){
                     $_SESSION['Email']=$Email;
-                    echo 'added';
-                    // header('location:customer_query.php');
+                    
+                 header('location:customer_profile.php');
                 }else{
                     echo '<script>alert("Please enter your information once again.")</script>';
                 }

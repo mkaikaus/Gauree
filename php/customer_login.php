@@ -11,7 +11,7 @@
                 $_SESSION['Email']=$Email;
                 
 
-                header('location:customer_query.php');
+                header('location:customer_profile.php');
             }else{
               echo '<script>alert("Wrong Email or Password.Try again with correct one.")</script>';
             }
