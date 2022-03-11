@@ -8,9 +8,8 @@
 .section{
 	width: 100%;
 	min-height: 100vh;
-	background-color: #ff66cc;
+	background-color: #ddd;
 }
-
 .container{
 	width: 80%;
 	display: block;
@@ -51,7 +50,7 @@
 	background-color: #3d3d3d;
 	padding:12px 40px;
 	text-decoration: none;
-	color:#ff66cc;
+	color:#fff;
 	font-size: 25px;
 	letter-spacing: 1.5px;
 }
