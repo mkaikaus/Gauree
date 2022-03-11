@@ -1,3 +1,35 @@
+
+<?php
+   include_once('database.php');
+if(isset($_POST['search'])){
+    $valuetosearch1=$_POST['valueTosearch1'];
+    $valuetosearch2=$_POST['valueTosearch2'];
+    $valuetosearch3=$_POST['valueTosearch3'];
+    $query="SELECT * FROM product_info where (proName LIKE '%$valuetosearch1%' and  proType LIKE '%$valuetosearch2%' and price LIKE '%$valuetosearch3%')";
+    $res=mysqli_query($connect,$query);
+}
+else{
+        $product = "SELECT * from product_info";
+        $res=mysqli_query($connect, $product);
+        $valuetosearch1="";
+        $valuetosearch2="";
+        $valuetosearch3="";
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,35 +51,43 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand logo" href="#">Gauree</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto nav_item">
-                    <li class="nav-item active btn" style="margin: 5px">
-                        <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item btn" style="margin: 5px">
-                        <a class="nav-link text-light" href="admin_login.php">Admin Login</a>
-                    </li>
-                    <li class="nav-item btn" style="margin: 5px">
-                        <a class="nav-link text-light" href="#">Customer - Login/Sign up</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <?php include("navbar.php");?>
+
+
+
+          
+
+
     <div class="product container">
         <h1 class="mt-3" style="color: #8946A6">Our Product</h1>
-        <?php
-        include_once('database.php');
-        if ($connect) {
-            $product = "SELECT * from product_info";
-            $res = mysqli_query($connect, $product);
-        ?>
+       
+       <div class="container b_head">
+        <h4 class="text-center m-5"><em><q>Try searching specific research papers by specific authors or even research subject!</q></em></h4>
+    </div>
+    <div class="container b_search">
+    <form action="" method="POST" class="text-center text-info font-weight-bold">
+        <div class="form-row">
+            <label for="inputName" class="col-sm-1 col-form-label">Product Name</label>
+            <div class="form-group col-md-3">
+                <input class="form-control" type="text" name="valueTosearch1" placeholder="Search by topic"
+                    value="<?php echo $valuetosearch1;?>">
+            </div>
+            <label for="inputName" class="col-sm-1 col-form-label">Product Type</label>
+            <div class="form-group col-md-3">
+                <input class="form-control" type="text" name="valueTosearch2" placeholder="Search by title"
+                    value="<?php echo $valuetosearch2;?>">
+            </div>
+            <label for="inputName" class="col-sm-1 col-form-label">Price</label>
+            <div class="form-group col-md-3">
+                <input class="form-control" type="text" name="valueTosearch3" placeholder="Search by author"
+                    value="<?php echo $valuetosearch3;?>">
+            </div>
+        </div>
+        <input class="form-group col-md-1 btn btn-info text-center"  style="background-color: #142850;" type="submit" name="search" value="Search"><br><br>
+    </form>
+
+    </div>
+         
             <div class="card-columns">
                 <?php
                 while ($row = mysqli_fetch_assoc($res)) :
@@ -80,9 +120,6 @@
                 ?>
             <?php endwhile; ?>
             </div>
-        <?php
-        }
-        ?>
     </div>
 
     <script src="../js/jquery-3.5.1.js"></script>
