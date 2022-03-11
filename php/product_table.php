@@ -105,7 +105,7 @@ if (isset($_POST['search'])) {
             </button>
         </div>
         <h3 CLASS="font-weight-bolder text-center" style="color: #8946A6;"> Product's information</h3>
-        <a href="#" class="btn btn-dark login_btn mt-2" style="margin-left: 43vw; width: 14vw;">Upload new product <i class='fas fa-plus-square'></i></a>
+        <a href="upload_product.php" class="btn btn-dark login_btn mt-2" style="margin-left: 43vw; width: 14vw;">Upload new product <i class='fas fa-plus-square'></i></a>
         <table class="table table-striped table-hover table-bordered mt-2">
             <thead class="bg-dark text-light text-center">
                 <th>Product ID</th>

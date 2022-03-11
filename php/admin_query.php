@@ -9,6 +9,20 @@ if ($connect) {
     }
 }
 ?>
+<?php
+if ($connect) {
+    $sql2 = "SELECT * FROM customer_info";
+    $res2 = mysqli_query($connect, $sql2);
+    $row2 = mysqli_num_rows($res2);
+}
+?>
+<?php
+if ($connect) {
+    $sql3 = "SELECT * FROM product_info";
+    $res3 = mysqli_query($connect, $sql3);
+    $row3 = mysqli_num_rows($res3);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,7 +88,7 @@ if ($connect) {
             <div class="row justify-content-between align-items-center row1">
                 <div class="col-sm-4">
                     <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
+                        <h1><?php echo $row2?></h1>
                     </div>
                     <div class="row justify-content-center align-items-center">
                         <h2>Total Clients</h2>
@@ -82,7 +96,7 @@ if ($connect) {
                 </div>
                 <div class="col-sm-4">
                     <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
+                        <h1><?php echo $row3?></h1>
                     </div>
                     <div class="row justify-content-center align-items-center">
                         <h2>Available Product</h2>
