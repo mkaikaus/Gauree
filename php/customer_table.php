@@ -100,12 +100,12 @@ if (isset($_POST['search'])) {
             <div class="form-outline" style="margin-left: 37.5vw; width: 20vw;">
                 <input type="search" id="form1" class="form-control" name="valueTosearch" placeholder="Value to search" value="<?php echo $valuetosearch; ?>" />
             </div>
-            <button type="submit" class="btn btn-info" name="search" style="width: 5vw">
+            <button type="submit" class="btn btn-dark login_btn" name="search" style="width: 5vw">
                 <i class="fas fa-search"></i>
             </button>
         </div>
         <br>
-        <h3 CLASS="text-info font-weight-bolder text-center"> Customer's information</h3>
+        <h3 CLASS="font-weight-bolder text-center" style="color: #8946A6;"> Customer's information</h3>
         <table class="table table-striped table-hover table-bordered ">
             <thead class="bg-dark text-light text-center">
                 <th>Customer ID</th>

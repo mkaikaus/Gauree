@@ -42,12 +42,12 @@ else{
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/index.css">
     <style>
-        .btn-dark{
-    background-color: #B762C1!important;
-    color: white;
-    font-size: large;
-}
-</style>
+        .btn-dark {
+            background-color: #B762C1 !important;
+            color: white;
+            font-size: large;
+        }
+    </style>
 </head>
 
 <body>
@@ -96,29 +96,28 @@ else{
                         <img class="card-img-top" src="../user_image/<?php echo $row['image']; ?>" style="width: 20rem;height: 20rem;" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title text-center font-weight-bold" style="color: #B762C1"><?php echo $row['proName']; ?></h5>
+                            <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Type: </span><?php echo $row['proType']; ?></h6>
                             <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Price: </span><?php echo $row['price']; ?> Tk</h6>
                             <?php
                             if ($row['piece'] != 0) {
                             ?>
-                                <div class="card-title ">
+                                <div class="card-titles">
 
                                     <p class="text-muted font-weight-bold"><span class="text-secondary">Available: </span><?php echo $row['piece']; ?></p>
                                 </div>
                                 <a href="#" class="btn btn-dark login_btn text-center">Add to cart</a>
-
+                            <?php
+                            } else { ?>
+                                <div class="card-title">
+                                    <p class="text-muted font-weight-bold"><span class="text-secondary">Sorry</p>
+                                </div>
+                                <a href="#" class="btn btn-dark login_btn text-center disabled">Out of stock</a>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
-                <?php
-                            } else { ?>
-                    <div class="card-title ">
-
-                        <p class="text-muted font-weight-bold"><span class="text-secondary">Sorry</p>
-                    </div>
-                    <a href="#" class="btn btn-dark login_btn text-center disabled">Out of stock</a>
-                <?php
-                            }
-                ?>
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             </div>
     </div>
 
