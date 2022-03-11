@@ -47,6 +47,11 @@ else{
             color: white;
             font-size: large;
         }
+  label{
+    color:#8946A6;
+  }
+
+
     </style>
 </head>
 
@@ -62,24 +67,25 @@ else{
         <h1 class="mt-3" style="color: #8946A6">Our Product</h1>
        
        <div class="container b_head">
-        <h4 class="text-center m-5"><em><q>Try searching specific research papers by specific authors or even research subject!</q></em></h4>
+        <h4 class="text-center m-5"><em><q>Try searching specific product by specific criteria.
+            <q></em></h4>
     </div>
     <div class="container b_search">
     <form action="" method="POST" class="text-center text-info font-weight-bold">
         <div class="form-row">
             <label for="inputName" class="col-sm-1 col-form-label">Product Name</label>
             <div class="form-group col-md-3">
-                <input class="form-control" type="text" name="valueTosearch1" placeholder="Search by topic"
+                <input class="form-control" type="text" name="valueTosearch1" placeholder="Search by product name"
                     value="<?php echo $valuetosearch1;?>">
             </div>
             <label for="inputName" class="col-sm-1 col-form-label">Product Type</label>
             <div class="form-group col-md-3">
-                <input class="form-control" type="text" name="valueTosearch2" placeholder="Search by title"
+                <input class="form-control" type="text" name="valueTosearch2" placeholder="Search by product type"
                     value="<?php echo $valuetosearch2;?>">
             </div>
             <label for="inputName" class="col-sm-1 col-form-label">Price</label>
             <div class="form-group col-md-3">
-                <input class="form-control" type="text" name="valueTosearch3" placeholder="Search by author"
+                <input class="form-control" type="text" name="valueTosearch3" placeholder="Search by price"
                     value="<?php echo $valuetosearch3;?>">
             </div>
         </div>
