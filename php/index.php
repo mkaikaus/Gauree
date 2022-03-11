@@ -1,3 +1,22 @@
+
+<?php
+   include_once('database.php');
+if($connect){
+   $query="SELECT * FROM product_info";
+   $res=mysqli_query($connect,$query);
+}
+else{
+  echo"error" ;     
+}
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,68 +27,26 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/index.css">
+   <style>
+        .btn-dark {
+            background-color: #B762C1 !important;
+            color: white;
+            font-size: large;
+        }
+
+
+    </style>
+
+
+
 </head>
 <body>
 
 
+<?php include("navbar.php");?>
 
 
 
-  <!--Start of a navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
-    <a class="navbar-brand" href="#">
-      <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto nav-margin">
-        <li class="nav-item active">
-          <a class="nav-link nav-color ac-color animate__animated animate__zoomIn wow zoomIn" href="#">Home <span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="#">Product</a>
-        </li>
-
-       <li class="nav-item">
-          <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="#">Blog</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#"> About Us <span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Contact Us <span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#"> Delivery Rules <span
-              class="sr-only">(current)</span></a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">FAQS <span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Admin Login
-            <span class="sr-only">(current)</span></a>
-        </li>
-             <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Customer- Login/Signup <span
-              class="sr-only">(current)</span></a>
-        </li>
-
-
-
-      </ul>
-
-    </div>
-  </nav>
-  <!--end of a navbar-->
 
  <!--start of a  section of banner-->
 
@@ -79,14 +56,56 @@
         <h1 class="text-center"><q>Good days are made of good jewelleries</q></h1>
       </div>
     </section>
-    <div class="product">
-      <h1>Our Product</h1>
-    </div>
+   
  <!--end of a  section of banner-->
 
-    
-     <!--start of a  grid of header section of offers-->
-        <div class="product">
+
+  <!--start of a  section of product-->  
+ <div class="product container">
+        <h1 class="mt-5" style="color: #8946A6">Our Product</h1>
+       
+  
+         
+            <div class="card-columns">
+                <?php
+                while ($row = mysqli_fetch_assoc($res)) :
+                ?>
+                    <div class="card mt-4 text-center" style="width: 20rem; border-color:#8946A6">
+                        <img class="card-img-top card_image" src="../user_image/<?php echo $row['image']; ?>" style="width: 20rem;height: 20rem;" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-center font-weight-bold" style="color: #B762C1"><?php echo $row['proName']; ?></h5>
+                            <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Type: </span><?php echo $row['proType']; ?></h6>
+                            <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Price: </span><?php echo $row['price']; ?> Tk</h6>
+                            <?php
+                            if ($row['piece'] != 0) {
+                            ?>
+                                <div class="card-titles">
+
+                                    <p class="text-muted font-weight-bold"><span class="text-secondary">Available: </span><?php echo $row['piece']; ?></p>
+                                </div>
+                                <a href="#" class="btn btn-dark login_btn text-center">Add to cart</a>
+                            <?php
+                            } else { ?>
+                                <div class="card-title">
+                                    <p class="text-muted font-weight-bold"><span class="text-secondary">Sorry</p>
+                                </div>
+                                <a href="#" class="btn btn-dark login_btn text-center disabled">Out of stock</a>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+    </div>
+
+  <!--end of a  section of product-->  
+
+
+
+
+ <!--start of a  grid of header section of offers-->
+        <div class="product mt-5">
       <h1>Special Offers</h1>
     </div>
        <!--end of a  grid of header section of offers--> 
@@ -188,7 +207,7 @@
 
 
      <!--start of a grid section-->
-<div class="container">
+<div class="container mt-5">
     <div class="row mt-5">
       <div class=" col-sm-2 col-md-6 col-lg-2 ">
         <div class="container header-box animate__animated animate__bounceInLeft wow bounceInLeft">
