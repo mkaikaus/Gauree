@@ -46,6 +46,7 @@ else{
 </head>
 <body>
    
+   <!--Start of a navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
     <a class="navbar-brand" href="#">
       <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>
@@ -64,26 +65,28 @@ else{
           <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="#">Product</a>
         </li>
 
-       <li class="nav-item">
-          <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="#">Blog</a>
-        </li>
+       
         <li class="nav-item active">
           <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#"> About Us <span
               class="sr-only">(current)</span></a>
         </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-color " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Details
+              </a>
+              <div class="dropdown-menu dp" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Blog </a>
+                <a class="dropdown-item" href="#">Delivery Rules</a>
+                <a class="dropdown-item" href="#">FAQS</a>
+              </div>
+            </li>
+
         <li class="nav-item active">
           <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Contact Us <span
               class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#"> Delivery Rules <span
-              class="sr-only">(current)</span></a>
-        </li>
 
-        <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">FAQS <span
-              class="sr-only">(current)</span></a>
-        </li>
+
         <li class="nav-item active">
           <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Admin Login
             <span class="sr-only">(current)</span></a>
@@ -99,6 +102,7 @@ else{
 
     </div>
   </nav>
+  <!--end of a navbar-->
  
 
     
