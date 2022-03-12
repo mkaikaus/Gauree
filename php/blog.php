@@ -25,6 +25,7 @@ if ($connect) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
 
@@ -46,7 +47,7 @@ if ($connect) {
 </script>
 
 <body>
-
+   
    <!--Start of a navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
     <a class="navbar-brand" href="#">
@@ -104,6 +105,8 @@ if ($connect) {
     </div>
   </nav>
   <!--end of a navbar-->
+
+ 
 
 
     <div class="hero-image">
