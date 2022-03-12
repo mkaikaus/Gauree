@@ -124,9 +124,6 @@ if (isset($_POST['search'])) {
                     <a href="product_table.php" class="btn btn-light">Product's Information</a>
                 </div>
                 <div class="col-sm">
-                    <a href="#" class="btn btn-light">Order's Information</a>
-                </div>
-                <div class="col-sm">
                     <a href="index.php" class="btn  btn-light">Log Out</a>
                 </div>
             </div>

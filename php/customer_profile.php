@@ -5,7 +5,7 @@ if (isset($_SESSION['Email'])) {
   $sqlfetch = "SELECT * FROM customer_info where Email='$_SESSION[Email]'";
   $res = mysqli_query($connect, $sqlfetch);
   $row = mysqli_fetch_assoc($res);
-  $_SESSION['CustomerID']=$row['CustomerID'];
+  $_SESSION['CustomerID'] = $row['CustomerID'];
 } else {
   header('location:customer_signup.php');
 }
@@ -118,9 +118,12 @@ if (isset($_GET['delete'])) {
           <a href="customer_profile.php?delete=<?php echo $row['CustomerID']; ?>" class="btn  btn-light">Delete Your Account</a></button>
         </div>
         <div class="col-sm">
-          <a href="order_overview.php" class="btn  btn-light">Order Overview</a>
+          <a href="order_info.php" class="btn  btn-light">Your order</a></button>
         </div>
-        <div class="logbtn">
+        <div class="col-sm">
+          <a href="cart.php" class="btn  btn-light">Cart</a></button>
+        </div>
+        <div class="col-sm logbtn">
           <?php
           if (isset($_POST['logout'])) {
             session_destroy();

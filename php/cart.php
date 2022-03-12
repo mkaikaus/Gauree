@@ -4,9 +4,15 @@ include_once('database.php');
 if ($connect) {
     if (isset($_SESSION['proID'])) {
         $CustomerID = $_SESSION['CustomerID'];
-        $sql2 = "SELECT * FROM cart inner join product_info using(proID) where CustomerID='$CustomerID'";
+        $sql2 = "SELECT * FROM cart inner join product_info using(proID) where CustomerID='$CustomerID' and flag='0'";
         $res2 = mysqli_query($connect, $sql2);
-        // $row2 = mysqli_fetch_assoc($res2);
+        $sql3 = "SELECT sum(price) FROM cart inner join product_info using(proID) where CustomerID='$CustomerID' and flag='0'";
+        $res3 = mysqli_query($connect, $sql3);
+    }
+    if(isset($_POST['order'])){
+        $update="UPDATE `cart` SET `flag`=1 WHERE CustomerID='$CustomerID'";
+        $result = mysqli_query($connect, $update);
+        header('location:booking.php');
     }
 }
 ?>
@@ -27,6 +33,61 @@ if ($connect) {
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
+    <a class="navbar-brand" href="#">
+      <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto nav-margin">
+        <li class="nav-item active">
+          <a class="nav-link nav-color ac-color animate__animated animate__zoomIn wow zoomIn" href="../php/Home.php">Home <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="../php/product.php">Product</a>
+        </li>
+
+       
+        <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/about.php"> About Us <span
+              class="sr-only">(current)</span></a>
+        </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-color " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Details
+              </a>
+              <div class="dropdown-menu dp" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../php/blog.php">Blog </a>
+                <a class="dropdown-item" href="../php/rules.php">Delivery Rules</a>
+                <a class="dropdown-item" href="../php/FAQ.php">FAQS</a>
+              </div>
+            </li>
+
+        <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/contact.php">Contact Us <span
+              class="sr-only">(current)</span></a>
+        </li>
+
+
+        <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/admin_login.php">Admin Login
+            <span class="sr-only">(current)</span></a>
+        </li>
+             <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/customer_login.php">Customer- Login/Signup <span
+              class="sr-only">(current)</span></a>
+        </li>
+
+
+
+      </ul>
+
+    </div>
+  </nav>
     <div class="container">
         <div class="card-columns">
             <?php
@@ -47,6 +108,13 @@ if ($connect) {
             endwhile;
             ?>
         </div>
+        <?php
+            while ($row3 = mysqli_fetch_array($res3)) :
+            ?>
+        <h3>Total: <?php echo $row3['sum(price)']; ?></h3>
+        <?php 
+            endwhile;
+        ?>
         <form method="post" action="" enctype="multipart/form-data">
             <button type="submit" class="btn btn-primary" name="order">Check Out</button>
         </form> 

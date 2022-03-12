@@ -24,7 +24,7 @@ if (isset($_GET['cart'])) {
     $proID = $_GET['cart'];
     $_SESSION['proID'] = $proID;
     $cID=$_SESSION['CustomerID'];
-    $query = "INSERT into cart(amount,proID,CustomerID) values ('1',$proID,$cID)";
+    $query = "INSERT into cart(amount,proID,CustomerID,flag) values ('1',$proID,$cID,'0')";
     $insertequery = mysqli_query($connect, $query);
     header('location: cart.php');
 }
@@ -121,8 +121,7 @@ if (isset($_GET['cart'])) {
         <h1 class="mt-3" style="color: #8946A6">Our Product</h1>
        
        <div class="container b_head">
-        <h4 class="text-center m-5"><em><q>Try searching specific product by specific criteria.
-            <q></em></h4>
+        <h4 class="text-center m-5"><em><q>Try searching specific product by specific criteria.</q></em></h4>
     </div>
     <div class="container b_search">
     <form action="" method="POST" class="text-center text-info font-weight-bold">

@@ -24,6 +24,14 @@ if ($connect) {
 }
 ?>
 
+<?php
+if ($connect) {
+    $sql4 = "SELECT * FROM cart where flag=1";
+    $res4 = mysqli_query($connect, $sql4);
+    $row4 = mysqli_num_rows($res4);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,9 +120,6 @@ if ($connect) {
                     <a href="product_table.php" class="btn btn-light">Product's Information</a>
                 </div>
                 <div class="col-sm">
-                    <a href="#" class="btn btn-light">Order's Information</a>
-                </div>
-                <div class="col-sm">
                     <a href="index.php" class="btn  btn-light">Log Out</a>
                 </div>
             </div>
@@ -141,7 +146,7 @@ if ($connect) {
                 </div>
                 <div class="col-sm-4">
                     <div class="row justify-content-center align-items-center">
-                        <h1>20</h1>
+                        <h1><?php echo $row4?></h1>
                     </div>
                     <div class="row justify-content-center align-items-center">
                         <h2>Pending Order</h2>
