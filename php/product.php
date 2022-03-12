@@ -7,6 +7,8 @@ if(isset($_POST['search'])){
     $valuetosearch3=$_POST['valueTosearch3'];
     $query="SELECT * FROM product_info where (proName LIKE '%$valuetosearch1%' and  proType LIKE '%$valuetosearch2%' and price LIKE '%$valuetosearch3%')";
     $res=mysqli_query($connect,$query);
+    // $price= "SELECT * FROM product_info where (price>0 and price<1000) or price>1000";
+    // $res=mysqli_query($connect,$price);
 }
 else{
         $product = "SELECT * from product_info";
@@ -16,19 +18,6 @@ else{
         $valuetosearch3="";
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,12 +45,62 @@ else{
 </head>
 
 <body>
-      <?php include("navbar.php");?>
+      <!-- <?php//nclude("navbar.php");?> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
+    <a class="navbar-brand" href="#">
+      <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto nav-margin">
+        <li class="nav-item active">
+          <a class="nav-link nav-color ac-color animate__animated animate__zoomIn wow zoomIn" href="#">Home <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="#">Product</a>
+        </li>
+
+       
+        <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#"> About Us <span
+              class="sr-only">(current)</span></a>
+        </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-color " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Details
+              </a>
+              <div class="dropdown-menu dp" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Blog </a>
+                <a class="dropdown-item" href="#">Delivery Rules</a>
+                <a class="dropdown-item" href="#">FAQS</a>
+              </div>
+            </li>
+
+        <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Contact Us <span
+              class="sr-only">(current)</span></a>
+        </li>
+
+
+        <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Admin Login
+            <span class="sr-only">(current)</span></a>
+        </li>
+             <li class="nav-item active">
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Customer- Login/Signup <span
+              class="sr-only">(current)</span></a>
+        </li>
 
 
 
-          
+      </ul>
 
+    </div>
+  </nav>
 
     <div class="product container">
         <h1 class="mt-3" style="color: #8946A6">Our Product</h1>
