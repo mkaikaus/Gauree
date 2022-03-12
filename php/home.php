@@ -131,23 +131,6 @@ else{
                             <h5 class="card-title text-center font-weight-bold" style="color: #B762C1"><?php echo $row['proName']; ?></h5>
                             <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Type: </span><?php echo $row['proType']; ?></h6>
                             <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Price: </span><?php echo $row['price']; ?> Tk</h6>
-                            <?php
-                            if ($row['piece'] != 0) {
-                            ?>
-                                <div class="card-titles">
-
-                                    <p class="text-muted font-weight-bold"><span class="text-secondary">Available: </span><?php echo $row['piece']; ?></p>
-                                </div>
-                                <a href="#" class="btn btn-dark login_btn text-center">Add to cart</a>
-                            <?php
-                            } else { ?>
-                                <div class="card-title">
-                                    <p class="text-muted font-weight-bold"><span class="text-secondary">Sorry</p>
-                                </div>
-                                <a href="#" class="btn btn-dark login_btn text-center disabled">Out of stock</a>
-                            <?php
-                            }
-                            ?>
                         </div>
                     </div>
                 <?php endwhile; ?>
@@ -176,7 +159,7 @@ else{
                  <div class="card-body">
                   <p class="card-title card_text mb-0">Payel</p>
                   
-                  <p class="card-text card_text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p class="card-text card_text2"><strike>120 Tk</strike><span style="color:#B762C1">   100 Tk</span></p>
                 <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
                 </div>
               </div>
@@ -189,7 +172,7 @@ else{
                 <div class="card-body">
                   <p class="card-title card_text mb-0">Gajra set</p>
                  
-                  <p class="card-text card_text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p class="card-text card_text2"><strike>1250 Tk</strike><span style="color:#B762C1">   1000 Tk</span></p>
                  <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
                 </div>
               </div>
@@ -202,7 +185,7 @@ else{
                 <div class="card-body">
                   <p class="card-title card_text mb-0">Neckpiece</p>
             
-                  <p class="card-text card_text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p class="card-text card_text2"><strike>430 Tk</strike><span style="color:#B762C1">   400 Tk</span></p>
                     <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
                 </div>
               </div>
@@ -221,7 +204,7 @@ else{
                  <div class="card-body">
                   <p class="card-title card_text mb-0">German Silver Set</p>
                   
-                  <p class="card-text card_text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p class="card-text card_text2"><strike>500 Tk</strike><span style="color:#B762C1">   350 Tk</span></p>
                 <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
                 </div>
               </div>
@@ -234,7 +217,7 @@ else{
                 <div class="card-body">
                   <p class="card-title card_text mb-0">Kundon set</p>
                  
-                  <p class="card-text card_text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p class="card-text card_text2"><strike>820 Tk</strike><span style="color:#B762C1">   700 Tk</span></p>
                  <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
                 </div>
               </div>
@@ -247,7 +230,7 @@ else{
                 <div class="card-body">
                   <p class="card-title card_text mb-0">Bangles</p>
             
-                  <p class="card-text card_text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p class="card-text card_text2"><strike>220 Tk</strike><span style="color:#B762C1">   200 Tk</span></p>
                     <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
                 </div>
               </div>
@@ -268,7 +251,7 @@ else{
         <div class="container header-box animate__animated animate__bounceInLeft wow bounceInLeft">
           <img src="../media/support.jpg" class="img-fluid h-image1 " alt="Responsive image">
           <h4 class="text-center mt-4">SUPPORT</h4>
-          <p class="lead text-center  header-p">CALL US 24/7<br>+88-017-837892<br>WRITE TO US<br>wrapupbd@gmail.com</p>
+          <p class="lead text-center  header-p">CALL US 24/7<br>+88-017-837892<br>WRITE TO US<br>admin123@gmail.com</p>
           
         </div>
       </div>
@@ -328,7 +311,6 @@ else{
     <div class="link p-5 links">
       <a class="c_link" href="#"><a href="#"
           class="fab fa-linkedin l_icon1"></a></a>
-      <a class="c_link" href="#"><i class="fab fa-github-square l_icon2"></i></a>
       <a class="c_link" href="#"><i class="fab fa-facebook-square l_icon3"></i></a>
       <a class="c_link" href="#"><i class="fas fa-envelope l_icon4"></i></a>
     </div>
