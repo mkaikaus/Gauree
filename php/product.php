@@ -45,8 +45,12 @@ else{
 </head>
 
 <body>
+<<<<<<< HEAD
          <!--Start of a navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
+=======
+        <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
+>>>>>>> 5d115dc377ceff7170ec15056db6c6d1fc29bc6c
     <a class="navbar-brand" href="#">
       <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
