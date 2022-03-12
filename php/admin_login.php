@@ -40,7 +40,7 @@ if ($connect) {
 <body>
 
  <!--Start of a navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
+ <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
     <a class="navbar-brand" href="#">
       <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -51,16 +51,16 @@ if ($connect) {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto nav-margin">
         <li class="nav-item active">
-          <a class="nav-link nav-color ac-color animate__animated animate__zoomIn wow zoomIn" href="#">Home <span
+          <a class="nav-link nav-color ac-color animate__animated animate__zoomIn wow zoomIn" href="../php/Home.php">Home <span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="#">Product</a>
+          <a class="nav-link nav-color animate__animated animate__zoomIn wow zoomIn " href="../php/product.php">Product</a>
         </li>
 
        
         <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#"> About Us <span
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../html/about.html"> About Us <span
               class="sr-only">(current)</span></a>
         </li>
               <li class="nav-item dropdown">
@@ -68,24 +68,24 @@ if ($connect) {
                 Details
               </a>
               <div class="dropdown-menu dp" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Blog </a>
-                <a class="dropdown-item" href="#">Delivery Rules</a>
-                <a class="dropdown-item" href="#">FAQS</a>
+                <a class="dropdown-item" href="../html/blog.html">Blog </a>
+                <a class="dropdown-item" href="../html/rules.html">Delivery Rules</a>
+                <a class="dropdown-item" href="../html/FAQ.html">FAQS</a>
               </div>
             </li>
 
         <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Contact Us <span
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../html/contact.html">Contact Us <span
               class="sr-only">(current)</span></a>
         </li>
 
 
         <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Admin Login
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/admin_login.php">Admin Login
             <span class="sr-only">(current)</span></a>
         </li>
              <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="#">Customer- Login/Signup <span
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/customer_login.php">Customer- Login/Signup <span
               class="sr-only">(current)</span></a>
         </li>
 
