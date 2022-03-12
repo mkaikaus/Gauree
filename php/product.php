@@ -45,7 +45,6 @@ else{
 </head>
 
 <body>
-      <!-- <?php//nclude("navbar.php");?> -->
         <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
     <a class="navbar-brand" href="#">
       <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>

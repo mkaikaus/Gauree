@@ -228,3 +228,8 @@ if (isset($_SESSION['email'])) {
     </section>
 </body>
 </html>
+
+
+         <!--     
+                        <a href="article.html" class="btn btn-primary btn-info text-light btn-sm" tabindex="-1"
+                            role="button" aria-disabled="true">Read full blog</a> -->
