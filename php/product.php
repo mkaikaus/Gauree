@@ -1,4 +1,5 @@
 <?php
+session_start();
    include_once('database.php');
 if(isset($_POST['search'])){
     $valuetosearch1=$_POST['valueTosearch1'];
@@ -17,6 +18,18 @@ else{
         $valuetosearch3="";
 }
 ?>
+
+<?php
+if (isset($_GET['cart'])) {
+    $proID = $_GET['cart'];
+    $_SESSION['proID'] = $proID;
+    $cID=$_SESSION['CustomerID'];
+    $query = "INSERT into cart(amount,proID,CustomerID) values ('1',$proID,$cID)";
+    $insertequery = mysqli_query($connect, $query);
+    header('location: cart.php');
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -135,7 +148,7 @@ else{
 
     </div>
          
-            <div class="card-columns">
+    <div class="card-columns">
                 <?php
                 while ($row = mysqli_fetch_assoc($res)) :
                 ?>
@@ -146,20 +159,28 @@ else{
                             <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Type: </span><?php echo $row['proType']; ?></h6>
                             <h6 class="card-title font-weight-bold"><span style="color: #EA99D5">Price: </span><?php echo $row['price']; ?> Tk</h6>
                             <?php
-                            if ($row['piece'] != 0) {
+                            if (isset($_SESSION['CustomerID'])) {
+                                if ($_SESSION['CustomerID'] != NULL) {
+                                    if ($row['piece'] != 0) {
                             ?>
-                                <div class="card-titles">
+                                        <div class="card-titles">
 
-                                    <p class="text-muted font-weight-bold"><span class="text-secondary">Available: </span><?php echo $row['piece']; ?></p>
-                                </div>
-                                <a href="#" class="btn btn-dark login_btn text-center">Add to cart</a>
+                                            <p class="text-muted font-weight-bold"><span class="text-secondary">Available: </span><?php echo $row['piece']; ?></p>
+                                        </div>
+                                        
+                                        <!-- <form method="post" action="" enctype="multipart/form-data">
+                                            <button type="submit" class="btn btn-info" name="cart">Add to cart</button>
+                                        </form> -->
+                                        <a href="product.php?cart=<?php echo $row['proID']; ?>" class="btn btn-dark login_btn text-center">Add to cart</a>
+                                    <?php
+                                    } else { ?>
+                                        <div class="card-title">
+                                            <p class="text-muted font-weight-bold"><span class="text-secondary">Sorry</p>
+                                        </div>
+                                        <a href="#" class="btn btn-dark login_btn text-center disabled">Out of stock</a>
                             <?php
-                            } else { ?>
-                                <div class="card-title">
-                                    <p class="text-muted font-weight-bold"><span class="text-secondary">Sorry</p>
-                                </div>
-                                <a href="#" class="btn btn-dark login_btn text-center disabled">Out of stock</a>
-                            <?php
+                                    }
+                                }
                             }
                             ?>
                         </div>
