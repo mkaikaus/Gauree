@@ -15,7 +15,7 @@
 
 
 
-  <!--Start of a navbar-->
+   <!--Start of a navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
     <a class="navbar-brand" href="#">
       <img src="../media/banner1 (2).png" class="img-fluid logo-image" alt="Responsive image"></a>
@@ -36,7 +36,7 @@
 
        
         <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../html/about.html"> About Us <span
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/about.php"> About Us <span
               class="sr-only">(current)</span></a>
         </li>
               <li class="nav-item dropdown">
@@ -44,14 +44,14 @@
                 Details
               </a>
               <div class="dropdown-menu dp" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../html/blog.html">Blog </a>
-                <a class="dropdown-item" href="../html/rules.html">Delivery Rules</a>
-                <a class="dropdown-item" href="../html/FAQ.html">FAQS</a>
+                <a class="dropdown-item" href="../php/blog.php">Blog </a>
+                <a class="dropdown-item" href="../php/rules.php">Delivery Rules</a>
+                <a class="dropdown-item" href="../php/FAQ.php">FAQS</a>
               </div>
             </li>
 
         <li class="nav-item active">
-          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../html/contact.html">Contact Us <span
+          <a class="nav-link nav-color  animate__animated animate__zoomIn wow zoomIn" href="../php/contact.php">Contact Us <span
               class="sr-only">(current)</span></a>
         </li>
 
