@@ -33,7 +33,7 @@
       <!--<p class="text-light text-1 mb-0 animate__animated animate__backInDown wow backInDown ">WE BUILD YOUR</p>-->
       <h1 class="animate__animated animate__zoomIn wow zoomIn top text-center"><span class="text-color text-2 mt-0"><b>GAUREE-</b></span>
         <span class="text-light text-2-bangla">গৌরি</span></h1>
-     <p class="text-light text-3 animate__animated animate__backInUp wow backInUp text-center">Good Days are made of Good jwelleries.</p>
+     <p class="text-light text-3 animate__animated animate__backInUp wow backInUp text-center">Good Days are made of Good jewelleries.</p>
      <!--<p class="lead text-light text-4 animate__animated animate__backInUp wow backInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore magna<br> aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br> ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
      <a href="home.php" class="btn  btn-lg active mt-2 my-btn animate__animated animate__backInUp wow backInUp" role="button" aria-pressed="true">    GET STARTED  <i class="fas fa-arrow-right"></i> </a>
     </div> 
@@ -48,7 +48,7 @@
             <!--<p class="text-light text-1 mb-0 animate__animated animate__backInDown wow backInDown ">WE BUILD YOUR</p>-->
             <h1 class="animate__animated animate__zoomIn wow zoomIn top text-center"><span class="text-color text-2 mt-0"><b>GAUREE-</b></span>
            <span class="text-light text-2-bangla">গৌরি</span></h1>
-           <p class="text-light text-3 animate__animated animate__backInUp wow backInUp text-center">Good Days are made of Good jwelleries.</p>
+           <p class="text-light text-3 animate__animated animate__backInUp wow backInUp text-center">Good Days are made of Good jewelleries.</p>
            <!--<p class="lead text-light text-4 animate__animated animate__backInUp wow backInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore magna<br> aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br> ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
            <a href="home.php" class="btn  btn-lg active mt-2 my-btn animate__animated animate__backInUp wow backInUp" role="button" aria-pressed="true">    GET STARTED  <i class="fas fa-arrow-right"></i> </a>
           </div> 
@@ -62,7 +62,7 @@
             <!--<p class="text-light text-1 mb-0 animate__animated animate__backInDown wow backInDown ">WE BUILD YOUR</p>-->
             <h1 class="animate__animated animate__zoomIn wow zoomIn top text-center"><span class="text-color text-2 mt-0"><b>GAUREE-</b></span>
                 <span class="text-light text-2-bangla">গৌরি</span></h1>
-           <p class="text-light text-3 animate__animated animate__backInUp wow backInUp text-center">Good Days are made of Good jwelleries.</p>
+           <p class="text-light text-3 animate__animated animate__backInUp wow backInUp text-center">Good Days are made of Good jewelleries.</p>
            <!--<p class="lead text-light text-4 animate__animated animate__backInUp wow backInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore magna<br> aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br> ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
            <a href="home.php" class="btn  btn-lg active mt-2 my-btn animate__animated animate__backInUp wow backInUp" role="button" aria-pressed="true">    GET STARTED  <i class="fas fa-arrow-right"></i> </a>
           </div> 

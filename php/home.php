@@ -275,7 +275,7 @@ else{
         <div class="header-box1 animate__animated animate__zoomIn wow zoomIn">
           <img src="../media/ship.jpg" class="img-fluid h-image1 " alt="Responsive image">
           <h4 class="text-center mt-4"> SHIPPING</h4>
-          <p class="lead text-center  header-p">70th*<br>Inside Dhaka City<br>150tk*<br>Outside Dhaka City</p>
+          <p class="lead text-center  header-p">70TK<br>Inside Dhaka City<br>150TK<br>Outside Dhaka City</p>
         
         </div>
       </div>

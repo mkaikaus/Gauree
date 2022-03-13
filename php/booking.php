@@ -106,6 +106,9 @@ if(isset($_SESSION['CustomerID'])){
                     <div class="jumbotron box">
                      <h1 class="header">WELCOME <?php echo $row["CustomerName"];?></h1>
                      <p class="lead text">You have made a booking in our service system.Thank you for choosing our service.We let you know further information through your Email. </p>
+                     <div class="button">
+                        <a href="customer_profile.php" class="btn btn-dark">Back to Profile</a>
+                    </div>
                     </div>
                  </div>
                
