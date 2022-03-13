@@ -124,14 +124,14 @@
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: #fff;
+    color: black;git
     flex-direction: column;
     font-weight: 300;
 }
 
 .container .contactInfo .box .text h3 {
     font-weight: 500;
-    color: #00bcd4;
+    color: #8946A6;
 }
 
 .contactForm {

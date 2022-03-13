@@ -100,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contactForm">
+            <!-- <div class="contactForm">
                 <form>
                     <h2> Send Message </h2>
                     <div class="inputBox">
@@ -119,7 +119,7 @@
                         <input type="submit" name=" " value=" send">
                     </div>
                 </form>
-            </div>
+            </div> -->
         </div>
     </section>
     <script src="../js/jquery-3.5.1.js"></script>
