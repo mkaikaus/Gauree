@@ -121,8 +121,7 @@ if ($connect) {
         if ($connect) {
             $sqlfetch = "SELECT * FROM blog";
            
-            $res = mysqli_query($connect, $sqlfetch);
-           
+            $res = mysqli_query($connect, $sqlfetch);           
 
         ?>
         <div class="row row-cols-1 row-cols-md-3 g-4">

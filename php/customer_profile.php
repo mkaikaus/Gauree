@@ -127,7 +127,7 @@ if (isset($_GET['delete'])) {
           <?php
           if (isset($_POST['logout'])) {
             session_destroy();
-            header('location:index.php');
+            header('location:home.php');
           }
           ?>
           <form method="post" action="" enctype="multipart/form-data">

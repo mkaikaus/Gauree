@@ -24,7 +24,7 @@ if (isset($_GET['cart'])) {
     $proID = $_GET['cart'];
     $_SESSION['proID'] = $proID;
     $cID=$_SESSION['CustomerID'];
-    $query = "INSERT into cart(amount,proID,CustomerID,flag) values ('1',$proID,$cID,'0')";
+    $query = "INSERT into cart(amount,proID,CustomerID,flag,cflag) values ('1',$proID,$cID,'0','0')";
     $insertequery = mysqli_query($connect, $query);
     header('location: cart.php');
 }

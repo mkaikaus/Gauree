@@ -120,6 +120,9 @@ if ($connect) {
                     <a href="product_table.php" class="btn btn-light">Product's Information</a>
                 </div>
                 <div class="col-sm">
+                    <a href="order_overview.php" class="btn btn-light">Order Overview</a>
+                </div>
+                <div class="col-sm">
                     <a href="index.php" class="btn  btn-light">Log Out</a>
                 </div>
             </div>

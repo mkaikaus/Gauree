@@ -122,11 +122,15 @@ if (isset($_POST['search'])) {
                     <a href="product_table.php" class="btn btn-light">Product's Information</a>
                 </div>
                 <div class="col-sm">
+                    <a href="order_overview.php" class="btn btn-light">Order Overview</a>
+                </div>
+                <div class="col-sm">
                     <a href="index.php" class="btn  btn-light">Log Out</a>
                 </div>
             </div>
         </div>
     </div>
+  <br>
     <br>
     <form action="product_table.php" method="POST">
         <div class="input-group align-self-center">

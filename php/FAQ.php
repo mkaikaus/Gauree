@@ -164,7 +164,7 @@
                 </div>
             </div>
 
-            <p class="Query"><b>For any Queries,Please contact here.</b><a href="contact.html"><button type="button" class="btn btn-dark">Contact <i class="fas fa-arrow-alt-circle-right"></i></button></a></p>
+            <p class="Query"><b>For any Queries,Please contact here.</b><a href="contact.php"><button type="button" class="btn btn-dark">Contact <i class="fas fa-arrow-alt-circle-right"></i></button></a></p>
 
         </section>
 

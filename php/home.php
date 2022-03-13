@@ -149,50 +149,65 @@ else{
        <!--end of a  grid of header section of offers--> 
 
        <!--start of a  grid of offer-->
-        <div class="container">
-          <div class="row">
+       <div class="container">
+        <div class="row">
             <div class="col-sm-4 col-md-6 col-lg-4">
-              <div class="card sm-card animate__animated animate__backInUp wow backInUp " style="width: 22rem;  height: 28rem;" > 
-                <div class="inner">
-                  <img src="../media/payel.jpg" class="card-img-top card_image" alt="...">
+                <div class="card sm-card animate__animated animate__backInUp wow backInUp "
+                    style="width: 22rem;  height: 28rem;">
+                    <div class="inner">
+                        <img src="../media/payel.jpg" class="card-img-top card_image" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title card_text mb-0">Payel</p>
+
+                        <p class="card-text card_text2">Invite 3 female member to our facebook group <a
+                                href="https://www.facebook.com/groups/gouree">Gauree</a>and give screenshots in our
+                            facebook page <a
+                                href="https://www.facebook.com/Gauree-%E0%A6%97%E0%A7%8C%E0%A6%B0%E0%A7%80-102045538260271">Gauree</a>
+                            and avil 10% discount </p>
+                        <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
+                    </div>
                 </div>
-                 <div class="card-body">
-                  <p class="card-title card_text mb-0">Payel</p>
-                  
-                  <p class="card-text card_text2"><strike>120 Tk</strike><span style="color:#B762C1">   100 Tk</span></p>
-                <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
-                </div>
-              </div>
             </div>
             <div class="col-sm-4 col-md-6 col-lg-4">
-              <div class="card sm-card md-card animate__animated animate__backInUp wow backInUp" style="width: 22rem;  height: 28rem;">
-               <div class="inner">
-                  <img src="../media/gajra set.jpg" class="card-img-top card_image" alt="...">
+                <div class="card sm-card md-card animate__animated animate__backInUp wow backInUp"
+                    style="width: 22rem;  height: 28rem;">
+                    <div class="inner">
+                        <img src="../media/gajra set.jpg" class="card-img-top card_image" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title card_text mb-0">Gajra set</p>
+
+                        <p class="card-text card_text2">Invite 3 female member to our facebook group <a
+                            href="https://www.facebook.com/groups/gouree">Gauree</a>and give screenshots in our
+                        facebook page <a
+                            href="https://www.facebook.com/Gauree-%E0%A6%97%E0%A7%8C%E0%A6%B0%E0%A7%80-102045538260271">Gauree</a>
+                        and avil 10% discount </p>
+                        <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <p class="card-title card_text mb-0">Gajra set</p>
-                 
-                  <p class="card-text card_text2"><strike>1250 Tk</strike><span style="color:#B762C1">   1000 Tk</span></p>
-                 <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
-                </div>
-              </div>
             </div>
             <div class="col-sm-4 col-md-6 col-lg-4">
-              <div class="card sm-card md-card1 animate__animated animate__backInUp wow backInUp" style="width: 22rem;  height: 28rem;">
-                <div class="inner">
-                  <img src="../media/neckpiece.jpg" class="card-img-top card_image" alt="...">
+                <div class="card sm-card md-card1 animate__animated animate__backInUp wow backInUp"
+                    style="width: 22rem;  height: 28rem;">
+                    <div class="inner">
+                        <img src="../media/neckpiece.jpg" class="card-img-top card_image" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title card_text mb-0">Neckpiece</p>
+
+                        <p class="card-text card_text2">Invite 3 female member to our facebook group <a
+                            href="https://www.facebook.com/groups/gouree">Gauree</a>and give screenshots in our
+                        facebook page <a
+                            href="https://www.facebook.com/Gauree-%E0%A6%97%E0%A7%8C%E0%A6%B0%E0%A7%80-102045538260271">Gauree</a>
+                        and avil 10% discount </p>
+                        <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <p class="card-title card_text mb-0">Neckpiece</p>
-            
-                  <p class="card-text card_text2"><strike>430 Tk</strike><span style="color:#B762C1">   400 Tk</span></p>
-                    <a href="#" class="read"><b>BUY NOW <i class="fas fa-arrow-right"></i></b></a>
-                </div>
-              </div>
             </div>
 
-          </div>
-         </div>
+        </div>
+    </div>
 
          <div class="container mt-5">
           <div class="row">
@@ -311,7 +326,7 @@ else{
     <div class="link p-5 links">
       <a class="c_link" href="#"><a href="#"
           class="fab fa-linkedin l_icon1"></a></a>
-      <a class="c_link" href="#"><i class="fab fa-facebook-square l_icon3"></i></a>
+      <a class="c_link" href="https://www.facebook.com/Gauree-%E0%A6%97%E0%A7%8C%E0%A6%B0%E0%A7%80-102045538260271"><i class="fab fa-facebook-square l_icon3"></i></a>
       <a class="c_link" href="#"><i class="fas fa-envelope l_icon4"></i></a>
     </div>
    
